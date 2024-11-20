@@ -48,5 +48,8 @@ quest_3 = input("Would you like Voice Rec-Ignition? \nState 'yes' or 'no': ")
 if quest_3 == 'yes':
   quest_llm = input("Would you like to know how Voice Reg-Ignition  works?")
 #If no, move onto fourth question
+if quest_llm == 'no':
+  print()
+  quest_4
 
 
