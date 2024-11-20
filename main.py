@@ -35,7 +35,10 @@ print()
 
 print('Would you like a gas or electric model?')
 quest_2 = input("Enter 'gas' or 'electric':  ")
-print("Excellent choice! You should consider electric though!  Electric cars have numerous environmental benefits, such as Vehicle-To-Grid Technology, which pushes excess energy from an vehicles battery back into the electrical grid!")
+if quest_2 == 'gas':
+  print("Excellent choice! You should consider electric though!  Electric cars have numerous environmental benefits, such as Vehicle-To-Grid Technology, which pushes excess energy from an vehicles battery back into the electrical grid!")
+if quest_2 == 'electric':
+  print("Environmentally conscious! Electric cars have numerous environmental benefits, such as Vehicle-To-Grid Technology, which pushes excess energy from an vehicles battery back into the electrical grid!")
 
 print("===========================================\n")
 
@@ -47,9 +50,13 @@ quest_3 = input("Would you like Voice Rec-Ignition? \nState 'yes' or 'no': ")
 
 if quest_3 == 'yes':
   quest_llm = input("Would you like to know how Voice Reg-Ignition  works?")
+  if quest_llm == 'yes':
+    print("Voice Rec-Ignition enables voice-activated control over your vehicle's ignition. Customize "
 #If no, move onto fourth question
 if quest_llm == 'no':
-  print()
-  quest_4
+  print("What color would you like your vehicle to be painted?")
+
+print("")
+
 
 
