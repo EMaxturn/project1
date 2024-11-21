@@ -11,20 +11,20 @@ print()
 print('a: Hummer eV2')
 print('b: Tesla Roadster')
 print('c: Mercedez-Benz GLE 350')
-print('d: Dodge Charger\n')
+print('d: Tesla Cybertruck\n')
 
 quest_1 = input("Select 'a', 'b', 'c', or 'd' : ")
 print()
 
 #Use series of if statements to compliment the customer on their choice, giving a fun fact about the car they chose. 
 if quest_1 == 'a':
-  print("Excellent choice, the Hummer eV9! Did you know it has 1000 horsepower? That's the power of one thousand horses!\n")
+  print("Excellent choice, the Hummer eV9! Did you know it has 1000 horsepower?\n")
 if quest_1 == 'b':
-  print("Excellent choice, the Tesla Roadster! Did you know that the Tesla Roadster was the first")
+  print("Excellent choice, the Tesla Roadster! Did you know that the Tesla Roadster was the first highway legal, serial production, all-electric car to use lithium-ion battery cells? Also, it was the first production all-electric car to travel more than 244 miles (393 km) per charge!\n")
 if quest_1 == 'c':
-  print("Excellent choice, the Mercedez-Benz GLE 350! \n\nDid you know that the 'G' in GLE stands for Geländewagen, which is German for 'off-road vehicle' or 'off land wagon'? The 'L' links the GLE to the E-Class, making the GLE the SUV equivalent of the E-Class.")
+  print("Excellent choice, the Mercedez-Benz GLE 350!\nDid you know that the 'G' in GLE stands for Geländewagen, which is German for 'off-road vehicle' or 'off land wagon'? The 'L' links the GLE to the E-Class, making the GLE the SUV equivalent of the E-Class.")
 if quest_1 == 'd':
-  print("Excellent choice, the Dodge Charger! Did you know it ...")
+  print("Excellent choice, the Cybertruck! Did you know the design of the Cybertruck was inspired by Blade Runner, and 'Wet Nellie', the Lotus Esprit driven by James Bond in The Spy Who Loved Me?")
   
 
 print("===========================================")
@@ -56,10 +56,10 @@ if quest_3 == 'yes':
 print("What wrap would you like for your vehicle?")
     
 #If no, move onto fourth question, asking about the wrap the customer would like to have for their car.
-
+quest_llm = ''
 if quest_llm == 'no':
   print("\n===========================================\n")
-  print("What wrap would you like for your vehicle?")
+  print("\nWhat wrap would you like for your vehicle?\n")
 
 print("\ta: Matte")
 print("\tb: Pearlescent")
@@ -87,10 +87,22 @@ print("\n===========================================\n")
 
 quest_5 = input("\nWould you like to increase your vehicles horsepower with a canister of nitrous oxide? (yes/no) : ")
 
+#Give customer option to learn more about nitrous
+
 if quest_5 == 'yes':
   quest_nitrous = input("\nWould you like to know how your vehicle utilizes nitrous? (yes/no) : ")
   if quest_nitrous == 'yes':
     print("\nA bottle of nitrous oxide is connected to the car's engine intake system. When the driver activates the nitrous valve, the nitrous is injected into the engine's combustion chamber. The high temperature in the combustion chamber breaks down the nitrous oxide into nitrogen monoxide and oxygen gas. The injection of nitrous oxide into an engine means that more oxygen is available during combustion. The extra oxygen allows the engine to burn more fuel, which produces more power and makes the car go faster. ")
+
+
+#If no, move onto final question. 
+
+if quest_5 == 'no':
+  print("\n===========================================\n")
+
+
+#Finally, summarize each of the costumers answers, with only the semantic information. Consider using f-strings to structure summary ... i.e 'You have selected an electric Benz GLE, with a matte wrap & Voice Rec-Ignition. You also chose nitrous oxide engine modification,  '
+  
 
 
 
