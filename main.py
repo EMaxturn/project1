@@ -8,13 +8,26 @@ print("==============================\n")
 #Use an if statement to compliment the customer on their choice, giving a fun fact about the car they chose. 
 print("What make & model would you like customized?")
 print()
-print('a: Hummer eV2')
-print('b: Tesla Roadster')
-print('c: Mercedez-Benz GLE 350')
-print('d: Tesla Cybertruck\n')
+print('\ta: Hummer eV2')
+print('\tb: Tesla Roadster')
+print('\tc: Mercedez-Benz GLE 350')
+print('\td: Tesla Cybertruck\n')
+
+
 
 quest_1 = input("Select 'a', 'b', 'c', or 'd' : ")
 print()
+
+#Store user selections using if statements
+
+if quest_1 == 'a':
+  whip = 'Hummer eV2'
+if quest_1 == 'b':
+  whip = 'Tesla Roadster'
+if quest_1 == 'c':
+  whip = 'Mercedez-Benz GLE 350'
+if quest_1 == 'd':
+  whip = 'Tesla Cybertruck'
 
 #Use series of if statements to compliment the customer on their choice, giving a fun fact about the car they chose. 
 if quest_1 == 'a':
@@ -40,20 +53,35 @@ if quest_2 == 'gas':
 if quest_2 == 'electric':
   print("\nEnvironmentally conscious! Did you know that some electric cars have numerous benefits, such as Vehicle-To-Grid Technology, which pushes excess energy from an vehicles battery back into the electrical grid!")
 
+#Add an 'n'...
+
+if quest_2 == 'electric':
+  quest_2 = 'n ' + quest_2
+if quest_2 == 'gas':
+  quest_2 = ' ' + quest_2
+
 print("\n===============================================\n")
 
 #Pose Question Three, another short answer question asking if the customer would like their car to start only using their voice.
 
 quest_3 = input("Would you like Voice Rec-Ignition? \nState 'yes' or 'no': ")
 
+#Store user selections using if statements
+
+if quest_3 == 'yes':
+  vox = " also chose to have Voice Rec-Ignition, "
+if quest_3 == 'no':
+  vox = " also not chose to have Voice Rec-Ignition, "
+
+  
 #Based on the response to the third question, if yes, prompt the user to see if they would like to know more about Voice Rec-Ignition.
 
 if quest_3 == 'yes':
-  quest_llm = input("Would you like to know how Voice Reg-Ignition works? (yes/no)")
+  quest_llm = input("Would you like to know how Voice Reg-Ignition works? (yes/no) ")
   if quest_llm == 'yes':
     print("\nVoice Rec-Ignition uses a transformer-based speech-recognizer for user-specific voice-activated ignition.\n")
     print("\n===================================================\n")
-print("What wrap would you like for your vehicle?")
+print("\nWhat wrap would you like for your vehicle?")
     
 #If no, move onto fourth question, asking about the wrap the customer would like to have for their car.
 quest_llm = ''
@@ -69,8 +97,8 @@ print("\td: Carbon Fiber")
 quest_4 = input("\nSelect 'a', 'b', 'c', or 'd' : ")
 
 #Copy the value of the wrap preference & map to name of wrap
-wrap_preference = ''
-quest_4 = wrap_preference
+
+wrap_preference = quest_4 
 
 if wrap_preference == 'a':
   wrap_preference = 'Matte'
@@ -92,17 +120,34 @@ quest_5 = input("\nWould you like to increase your vehicles horsepower with a ca
 if quest_5 == 'yes':
   quest_nitrous = input("\nWould you like to know how your vehicle utilizes nitrous? (yes/no) : ")
   if quest_nitrous == 'yes':
-    print("\nA bottle of nitrous oxide is connected to the car's engine intake system. When the driver activates the nitrous valve, the nitrous is injected into the engine's combustion chamber. The high temperature in the combustion chamber breaks down the nitrous oxide into nitrogen monoxide and oxygen gas. The injection of nitrous oxide into an engine means that more oxygen is available during combustion. The extra oxygen allows the engine to burn more fuel, which produces more power and makes the car go faster. ")
+    print("\nA bottle of nitrous oxide is connected to the car's engine intake system. When the driver activates the nitrous valve, the nitrous is injected into the engine's combustion chamber. The high temperature in the combustion chamber breaks down the nitrous oxide into nitrogen monoxide and oxygen gas. The injection of nitrous oxide into an engine means that more oxygen is available during combustion. The extra oxygen allows the engine to burn more fuel, which produces more power and makes the car go faster.\n ")
+    print("\n===========================================\n")
+    
 
+#Store question 5 answer.
+if quest_5 == 'yes':
+  nos = '& chose to install a nitrous oxide engine modification'
+if quest_5 == 'no':
+  nos = "& chose to play it safe, not installing a nitrous oxide engine modification"
 
 #If no, move onto final question. 
 
 if quest_5 == 'no':
   print("\n===========================================\n")
 
+quest_6 = input("Finally, enter what color you'd like: ")
 
-#Finally, summarize each of the costumers answers, with only the semantic information. Consider using f-strings to structure summary ... i.e 'You have selected an electric Benz GLE, with a matte wrap & Voice Rec-Ignition. You also chose nitrous oxide engine modification,  '
-  
+  #Finally, summarize each of the costumers answers, with only the semantic information. Consider using f-strings to structure summary ... i.e 'You have selected an electric Benz GLE, with a matte wrap & Voice Rec-Ignition. You also chose nitrous oxide engine modification,  '
+
+print("\n===========================================\n")
+
+print("\nPrinting summary...\n")
+
+print(f"You have selected a{quest_2+'-powered'} {quest_6.capitalize()} {whip}, with a {wrap_preference} wrap. You{vox}{nos}.")
+print()
+print("Thank you for visiting Snowblue Detail & Body! We appreciate your patronage, and your data!")
+
+
 
 
 
